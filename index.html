@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kavibarath Sitharthan | AI Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Kavibarath Sitharthan, an IT undergraduate specializing in Artificial Intelligence at SLIIT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="neural-field" aria-hidden="true"></canvas>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Kavibarath Sitharthan home">
+      <span>KS</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">AI undergraduate / LLM agent builder / full-stack engineer</p>
+        <h1 class="gradient-name">Kavibarath Sitharthan</h1>
+        <p class="hero-text">
+          I build intelligent systems end to end — from LLM agents and RAG pipelines to
+          production-ready full-stack platforms. Currently in my 3rd year at SLIIT,
+          specializing in Artificial Intelligence.
+        </p>
+        <div class="hero-actions" aria-label="Contact links">
+          <a class="button primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=kavibarath004@gmail.com" target="_blank" rel="noopener noreferrer">Email Me</a>
+          <a class="button secondary" href="https://www.github.com/Kavibarath" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/kavibarathsitharthan" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <aside class="signal-panel" aria-label="Profile snapshot">
+        <div class="panel-topline">
+          <span class="status-dot"></span>
+          <span>Available for AI and software engineering opportunities</span>
+        </div>
+        <dl>
+          <div>
+            <dt>Focus</dt>
+            <dd>Artificial Intelligence</dd>
+          </div>
+          <div>
+            <dt>Location</dt>
+            <dd>Sri Lanka</dd>
+          </div>
+          <div>
+            <dt>Stack</dt>
+            <dd>Python, TypeScript, Java, React, Spring Boot</dd>
+          </div>
+          <div>
+            <dt>Now building</dt>
+            <dd>LLM agents &amp; RAG systems</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="section intro" aria-label="Professional summary">
+      <p>
+        Motivated and detail-oriented IT undergraduate with hands-on experience in full-stack web development,
+        machine learning, and object-oriented programming. I enjoy delivering end-to-end software solutions
+        across AI/ML, Java applications, and modern React/Node.js architectures.
+      </p>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">Selected work</p>
+        <h2>Projects Built Across AI, Web, and Java</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card featured">
+          <div class="project-meta">
+            <span>Jul 2026 - Present</span>
+            <span>Agentic AI</span>
+            <span class="status ongoing"><span class="pulse"></span>In progress</span>
+          </div>
+          <h3>Agentic AI Research Assistant</h3>
+          <p>
+            A research-assistant agent built from scratch — a hand-rolled Think → Act → Observe loop
+            where the LLM decides when to answer directly and when to call tools.
+          </p>
+          <ul>
+            <li>Implemented the agent loop by hand with calculator, datetime, and Tavily web-search tools.</li>
+            <li>Added sandboxed code execution: human-in-the-loop approval plus subprocess isolation with timeouts.</li>
+            <li>Roadmap: ChromaDB memory, LangGraph multi-step orchestration, and a FastAPI + React frontend.</li>
+          </ul>
+          <div class="tags">
+            <span>Python</span><span>LLM Agents</span><span>Groq</span><span>Tavily</span><span>LangGraph</span>
+          </div>
+          <a class="repo-link" href="https://github.com/Kavibarath/ai-agents-course" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span>Jun 2026 - Jul 2026</span>
+            <span>AI / RAG</span>
+            <span class="status done">Completed</span>
+          </div>
+          <h3>RAG Chatbot — Lecture Assistant</h3>
+          <p>
+            A Retrieval-Augmented Generation chatbot that answers questions grounded exclusively in
+            uploaded lecture notes — with citations, and an honest refusal when the notes don't cover it.
+          </p>
+          <ul>
+            <li>Two-stage retrieval: MiniLM embeddings in ChromaDB, reranked by a cross-encoder.</li>
+            <li>Grounded generation with Llama 3.3 70B, streamed to a React chat UI via Server-Sent Events.</li>
+            <li>Reproducible recall@k eval comparing vector-only vs reranked retrieval.</li>
+          </ul>
+          <div class="tags">
+            <span>Python</span><span>FastAPI</span><span>ChromaDB</span><span>RAG</span><span>React</span>
+          </div>
+          <a class="repo-link" href="https://github.com/Kavibarath/rag-chatbot" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span>Jun 2026</span>
+            <span>Full-stack + AI</span>
+            <span class="status done">Completed</span>
+          </div>
+          <h3>AI-Powered Smart Restaurant System</h3>
+          <p>
+            A full-stack restaurant management platform with integrated AI demand forecasting and
+            waste prediction, built as a two-member collaborative project.
+          </p>
+          <ul>
+            <li>Owned the Inventory Intelligence module: stock, suppliers, waste, and inventory forecasting.</li>
+            <li>Next.js dashboard backed by Node.js/Express with Prisma and PostgreSQL.</li>
+            <li>Dedicated FastAPI microservice serving the forecasting and waste-prediction models.</li>
+          </ul>
+          <div class="tags">
+            <span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Prisma</span><span>FastAPI</span>
+          </div>
+          <a class="repo-link" href="https://github.com/Kavibarath/AI-Restaurant-System" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span>Jun 2026</span>
+            <span>Full-stack</span>
+            <span class="status done">Completed</span>
+          </div>
+          <h3>Aurelia Grand — Hotel Reservation System</h3>
+          <p>
+            A production-ready luxury hotel reservation platform covering the full lifecycle:
+            booking, payment, check-in/out, and admin operations. All E2E tests passing.
+          </p>
+          <ul>
+            <li>Spring Boot 3 + Java 17 REST API with Spring Security, JWT auth, and MySQL/JPA.</li>
+            <li>React 19 + Vite frontend with real-time availability search and a glass-morphism UI.</li>
+            <li>Admin suite: rate plans, room reassignment, revenue reports, cleaning and no-show handling.</li>
+          </ul>
+          <div class="tags">
+            <span>Spring Boot</span><span>Java 17</span><span>React 19</span><span>MySQL</span><span>JWT</span>
+          </div>
+          <a class="repo-link" href="https://github.com/Kavibarath/hotel-reservation-system" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span>Apr 2026</span>
+            <span>Mobile</span>
+            <span class="status done">Completed</span>
+          </div>
+          <h3>Food Reservation App</h3>
+          <p>
+            A cross-platform mobile app connecting customers with restaurant owners for table bookings,
+            food packages, and function-hall reservations.
+          </p>
+          <ul>
+            <li>React Native (TypeScript) frontend with role-based flows for customers and owners.</li>
+            <li>Node.js/Express REST API with JWT auth, bcrypt, and Mongoose over MongoDB.</li>
+            <li>Owner dashboard for menus, table capacity, and real-time booking management.</li>
+          </ul>
+          <div class="tags">
+            <span>React Native</span><span>TypeScript</span><span>Node.js</span><span>MongoDB</span>
+          </div>
+          <a class="repo-link" href="https://github.com/Kavibarath/Food-Reservation-App" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-meta">
+            <span>Oct 2025 - Dec 2025</span>
+            <span>AI/ML</span>
+            <span class="status done">Completed</span>
+          </div>
+          <h3>Heart Attack Prediction Pipeline</h3>
+          <p>
+            Leak-safe ML preprocessing pipeline for heart attack risk prediction, built with clear validation and analysis.
+          </p>
+          <ul>
+            <li>Handled missing values, categorical encoding, scaling, outliers, and feature selection.</li>
+            <li>Applied Mutual Information, PCA, and SMOTE for class imbalance correction.</li>
+            <li>Produced boxplots, histograms, PCA variance curves, and MI plots.</li>
+          </ul>
+          <div class="tags">
+            <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>PCA</span>
+          </div>
+          <a class="repo-link" href="https://github.com/Kavibarath/PG14_AIML_heart_attack_prediction" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span></a>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">Technical profile</p>
+        <h2>Skills for AI-Driven Product Engineering</h2>
+      </div>
+      <div class="skills-grid">
+        <div>
+          <h3>Languages</h3>
+          <p>Python, Java, JavaScript, HTML5, CSS3, SQL</p>
+        </div>
+        <div>
+          <h3>Frontend</h3>
+          <p>React.js, Next.js, Redux, Context API, Responsive Design</p>
+        </div>
+        <div>
+          <h3>Backend</h3>
+          <p>Node.js, Express.js, RESTful APIs, Authentication, Authorization</p>
+        </div>
+        <div>
+          <h3>Databases</h3>
+          <p>MongoDB, MySQL, PostgreSQL</p>
+        </div>
+        <div>
+          <h3>AI / ML</h3>
+          <p>Scikit-learn, Pandas, NumPy, SMOTE, PCA, Feature Engineering, Data Preprocessing</p>
+        </div>
+        <div>
+          <h3>LLM & Agents</h3>
+          <p>RAG Pipelines, LLM Tool Use, ChromaDB, Embeddings & Reranking, FastAPI, Groq API, LangGraph</p>
+        </div>
+        <div>
+          <h3>Engineering</h3>
+          <p>OOP, Data Structures, MVC Architecture, Spring Boot, Prisma, Docker, Agile, Git, GitHub</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section split" id="education">
+      <div class="section-heading">
+        <p class="eyebrow">Education</p>
+        <h2>SLIIT Artificial Intelligence Specialization</h2>
+      </div>
+      <div class="education-card">
+        <p class="degree">BSc (Hons) in Information Technology</p>
+        <h3>Sri Lanka Institute of Information Technology</h3>
+        <p>Specialization in Artificial Intelligence</p>
+        <p>Oct 2024 - Jul 2028 / Colombo, Sri Lanka</p>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Let’s Build Intelligent Systems</h2>
+        <p>
+          I’m interested in AI engineering, ML workflow development, full-stack software projects,
+          internships, and collaborative technical teams.
+        </p>
+      </div>
+      <div class="contact-links">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kavibarath004@gmail.com" target="_blank" rel="noopener noreferrer">kavibarath004@gmail.com</a>
+        <a href="tel:+94769163542">+94 769 163 542</a>
+        <a href="https://www.linkedin.com/in/kavibarathsitharthan" target="_blank" rel="noopener noreferrer">linkedin.com/in/kavibarathsitharthan</a>
+        <a href="https://www.github.com/Kavibarath" target="_blank" rel="noopener noreferrer">github.com/Kavibarath</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Designed and built for Kavibarath Sitharthan.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
