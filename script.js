@@ -107,6 +107,12 @@ if (!reduceMotion && "IntersectionObserver" in window) {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
           observer.unobserve(entry.target);
+          // Drop the reveal classes once the entrance finishes so the
+          // .reveal.visible transform stops overriding the 3D tilt.
+          setTimeout(() => {
+            entry.target.classList.remove("reveal", "visible");
+            entry.target.style.removeProperty("--reveal-delay");
+          }, 1300);
         }
       }
     },
@@ -116,11 +122,25 @@ if (!reduceMotion && "IntersectionObserver" in window) {
   revealTargets.forEach((el) => observer.observe(el));
 }
 
-// Cursor spotlight: track pointer position per project card for the hover glow.
+// Cursor spotlight + spatial tilt: cards glow toward and lean with the pointer.
 document.querySelectorAll(".project-card").forEach((card) => {
   card.addEventListener("pointermove", (event) => {
     const rect = card.getBoundingClientRect();
-    card.style.setProperty("--mx", `${event.clientX - rect.left}px`);
-    card.style.setProperty("--my", `${event.clientY - rect.top}px`);
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    card.style.setProperty("--mx", `${x}px`);
+    card.style.setProperty("--my", `${y}px`);
+
+    if (!reduceMotion) {
+      const tiltY = (x / rect.width - 0.5) * 7;
+      const tiltX = (0.5 - y / rect.height) * 7;
+      card.style.setProperty("--ry", `${tiltY.toFixed(2)}deg`);
+      card.style.setProperty("--rx", `${tiltX.toFixed(2)}deg`);
+    }
+  });
+
+  card.addEventListener("pointerleave", () => {
+    card.style.setProperty("--rx", "0deg");
+    card.style.setProperty("--ry", "0deg");
   });
 });
